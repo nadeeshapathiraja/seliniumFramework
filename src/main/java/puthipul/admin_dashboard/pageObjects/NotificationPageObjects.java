@@ -9,8 +9,8 @@ public class NotificationPageObjects {
 	public WebDriver driver;
 
 	//In Dashboard 
-	By selectNotification = By.linkText("Notifications");
-	By selectDestination =By.xpath("//span[text()='Notifications']");
+	By SelectNotificationMenu = By.linkText("Notifications");
+	By SelectDestination =By.xpath("//span[text()='Notifications']");
 	
 	//Side MenuBar  
 	By SelectProductCatalog =By.xpath("//span[text()='Product Catalog']");
@@ -39,6 +39,40 @@ public class NotificationPageObjects {
 		this.driver=driver;
 	}
 	
+	//In Dashboard
+	public WebElement getSelectNotificationMenu() {
+		return driver.findElement(SelectNotificationMenu);
+	}
+	public WebElement getSelectDestination() {
+		return driver.findElement(SelectDestination);
+	}
+	
+	//Side MenuBar
+	public WebElement getSelectProductCatalog() {
+		return driver.findElement(SelectProductCatalog);
+	}
+	public WebElement getSelectListtProduct() {
+		return driver.findElement(SelectListtProduct);
+	}
+	public WebElement getSelectAddtProduct() {
+		return driver.findElement(SelectAddtProduct);
+	}
+	public WebElement getSelectLeadEngine() {
+		return driver.findElement(SelectLeadEngine);
+	}
+	public WebElement getSelectReport() {
+		return driver.findElement(SelectReport);
+	}
+	public WebElement getTextHelp() {
+		return driver.findElement(TextHelp);
+	}
+	public WebElement getHelpDoc() {
+		return driver.findElement(HelpDoc);
+	}
+	public WebElement getDashboardVersion() {
+		return driver.findElement(DashboardVersion);
+	}
+	
 	//Notification Screen
 	public WebElement getbtnCompose() {
 		return driver.findElement(btnCompose);
@@ -50,7 +84,7 @@ public class NotificationPageObjects {
 		return driver.findElement(txtSelectAll);
 	}
 	public WebElement getSelectNotification() {
-		return driver.findElement(SelectNotification);
+		return driver.findElement(SelectNotificationMenu);
 	}
 	
 	//Header items
