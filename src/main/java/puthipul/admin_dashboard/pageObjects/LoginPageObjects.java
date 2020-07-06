@@ -8,6 +8,7 @@ public class LoginPageObjects {
 	
 	public WebDriver driver;
 	
+	
 	By txtuserName = By.xpath("//input[@placeholder='Username']");
 	By txtpassWord = By.xpath("//input[@placeholder='Password']");
 	By btnLogin = By.xpath("//span[text()='Log In']");
@@ -16,6 +17,8 @@ public class LoginPageObjects {
 	By icon = By.xpath("//div[@class='MuiAvatar-root MuiAvatar-circle jss55 MuiAvatar-colorDefault']");
 	By logo = By.xpath("//img[@alt='Logo']");
 	By lblLoggedIn = By.xpath("//a[text()='Liongate Admin']");
+	
+
 	
 	public LoginPageObjects(WebDriver driver) {
 		this.driver=driver;
