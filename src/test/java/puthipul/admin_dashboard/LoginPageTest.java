@@ -26,14 +26,20 @@ public class LoginPageTest extends Base{
 	public void basePageNavigation(String Username,String Password) throws IOException, InterruptedException {		
 		 driver.get(website);
 	     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	     
 	     LoginPageObjects login = new LoginPageObjects(driver);
+	     
 	     assertEquals( login.getTitle1().getText(), "Sign In");	 
 	     Assert.assertTrue(login.getTitle1().isDisplayed());
+	     
 	     assertEquals( login.getTitle2().getText(), "Sign in to Admimistration Dashboard");	 
 	     Assert.assertTrue(login.getTitle2().isDisplayed());
+	     
 	     login.getUserName().sendKeys(Username);
 	     login.getPassword().sendKeys(Password);
+	     
 	     login.getLoginBtn().click();
+	     
 	     Thread.sleep(50000);
 	     Assert.assertTrue(login.getLoggedIn().isDisplayed());
 	     Thread.sleep(50000);

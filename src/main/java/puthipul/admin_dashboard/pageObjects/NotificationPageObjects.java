@@ -12,7 +12,7 @@ public class NotificationPageObjects {
 	By SelectNotificationMenu = By.linkText("Notifications");
 	By SelectDestination =By.xpath("//span[text()='Notifications']");
 	
-	//Side MenuBar  
+	//Side MenuBar Objects  
 	By SelectProductCatalog =By.xpath("//span[text()='Product Catalog']");
 	By SelectListtProduct =By.xpath("//span[text()='List Products']");
 	By SelectAddtProduct =By.xpath("//span[text()='Add Product']");
@@ -22,18 +22,18 @@ public class NotificationPageObjects {
 	By HelpDoc =By.xpath("//a[text()='Check our docs']");
 	By DashboardVersion =By.xpath("//p[text()='Administration Dashboard Version 1.0.0']");
 	
-	//Header items
+	//Header Objects
 	By logo = By.xpath("//img[@alt='Logo']");
 	By iconSearch = By.xpath("//*[@class='MuiSvgIcon-root MuiSvgIcon-fontSizeSmall']");
 	By iconBell = By.xpath("/html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/button[2]/span[1]/svg[1]");
 	By iconAvatar = By.xpath("//*[@class='MuiSvgIcon-root MuiAvatar-fallback']");
 	By iconAdminName = By.xpath("//h6[text()='Liongate Admin']");
 	
-	//Notification screen	
+	//Notification screen Objects	 
 	By btnCompose = By.xpath("//span[text()='Compose']");
 	By btnSelectallCheckBox = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[1]/span[1]/input[1]");
 	By txtSelectAll = By.xpath("//h6[text()='Select all']");
-	By SelectNotification = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]");
+	
 	
 	public NotificationPageObjects(WebDriver driver) {
 		this.driver=driver;
@@ -73,6 +73,23 @@ public class NotificationPageObjects {
 		return driver.findElement(DashboardVersion);
 	}
 	
+	//Header items
+	public WebElement getLogo() {
+		return driver.findElement(logo);
+	}
+	public WebElement getIconSearch() {
+		return driver.findElement(iconSearch);
+	}
+	public WebElement getIconBell() {
+		return driver.findElement(iconBell);
+	}
+	public WebElement getIconAvatar() {
+		return driver.findElement(iconAvatar);
+	}
+	public WebElement getIconAdminName() {
+		return driver.findElement(iconAdminName);
+	}
+	
 	//Notification Screen
 	public WebElement getbtnCompose() {
 		return driver.findElement(btnCompose);
@@ -87,22 +104,7 @@ public class NotificationPageObjects {
 		return driver.findElement(SelectNotificationMenu);
 	}
 	
-	//Header items
-	public WebElement getlogo() {
-		return driver.findElement(logo);
-	}
-	public WebElement geticonSearch() {
-		return driver.findElement(iconSearch);
-	}
-	public WebElement geticonBell() {
-		return driver.findElement(iconBell);
-	}
-	public WebElement geticonAvatar() {
-		return driver.findElement(iconAvatar);
-	}
-	public WebElement geticonAdminName() {
-		return driver.findElement(iconAdminName);
-	}
+	
 	
 	
 	
